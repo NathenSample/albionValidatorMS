@@ -23,8 +23,10 @@ public class KillmailVerificationService
         this.documentGearParserService = documentGearParserService;
     }
 
+    //TODO: Fix system outs
     public boolean verifyKillmail(VerificationRequest verificationRequest)
     {
+        System.out.println("Now processing: " + verificationRequest.getKillmailUrl());
         try
         {
             Document webDoc = documentRetriever.getDocument(verificationRequest.getKillmailUrl());

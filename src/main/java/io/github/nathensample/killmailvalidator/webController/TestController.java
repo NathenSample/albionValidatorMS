@@ -1,4 +1,4 @@
-package io.github.nathensample.killmailValidator.webController;
+package io.github.nathensample.killmailvalidator.webController;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

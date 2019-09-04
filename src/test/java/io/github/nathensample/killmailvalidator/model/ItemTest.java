@@ -1,4 +1,4 @@
-package io.github.nathensample.killmailValidator.model;
+package io.github.nathensample.killmailvalidator.model;
 
 import org.junit.Assert;
 import org.junit.Test;

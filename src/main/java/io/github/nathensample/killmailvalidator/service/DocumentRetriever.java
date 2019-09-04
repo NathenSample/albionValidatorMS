@@ -1,4 +1,4 @@
-package io.github.nathensample.killmailValidator.service;
+package io.github.nathensample.killmailvalidator.service;
 
 import org.jsoup.nodes.Document;
 

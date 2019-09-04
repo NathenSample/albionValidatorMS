@@ -1,4 +1,4 @@
-package io.github.nathensample.killmailValidator;
+package io.github.nathensample.killmailvalidator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

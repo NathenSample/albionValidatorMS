@@ -2,8 +2,8 @@ package io.github.nathensample.killmailvalidator.range;
 
 public class PositiveRange implements ComparableRange
 {
+    private static final int UPPER_BOUND = Integer.MAX_VALUE;
     private final int lowerBound;
-    private final int upperBound = Integer.MAX_VALUE;
 
     public PositiveRange(int lowerBound)
     {
@@ -19,6 +19,6 @@ public class PositiveRange implements ComparableRange
     @Override
     public int getHigherBound()
     {
-        return upperBound;
+        return UPPER_BOUND;
     }
 }

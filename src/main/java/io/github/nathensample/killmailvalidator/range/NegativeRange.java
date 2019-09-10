@@ -2,7 +2,7 @@ package io.github.nathensample.killmailvalidator.range;
 
 public class NegativeRange implements ComparableRange
 {
-    private final int lowerBound = 0;
+    private static final int LOWER_BOUND = 0;
     private final int upperBound;
 
     public NegativeRange(int upperBound)
@@ -13,7 +13,7 @@ public class NegativeRange implements ComparableRange
     @Override
     public int getLowerBound()
     {
-        return lowerBound;
+        return LOWER_BOUND;
     }
 
     @Override

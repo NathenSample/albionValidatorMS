@@ -2,6 +2,7 @@ package io.github.nathensample.killmailvalidator.service;
 
 import io.github.nathensample.killmailvalidator.range.ComparableRange;
 import io.github.nathensample.killmailvalidator.range.MultiValueRange;
+import io.github.nathensample.killmailvalidator.range.exception.RangeParsingException;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class RangeService
         this.logger = logger;
     }
 
-    public ComparableRange getRange(String rangeString)
+    public ComparableRange getRange(String rangeString) throws RangeParsingException
     {
         //Check to see if we've literally just been given an int
         try

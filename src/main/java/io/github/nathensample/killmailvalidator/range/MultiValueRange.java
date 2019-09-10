@@ -11,6 +11,12 @@ public class MultiValueRange implements ComparableRange
         this.upperBound = upperBound;
     }
 
+    public MultiValueRange(int bound)
+    {
+        this.lowerBound = bound;
+        this.upperBound = bound;
+    }
+
     @Override
     public int getLowerBound()
     {

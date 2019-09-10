@@ -6,4 +6,9 @@ public class RangeParsingException extends Exception
     {
         super(String.format("Unable to parse range from: %s", givenRange));
     }
+
+    public RangeParsingException(String message, String givenRange)
+    {
+        super(String.format(message, givenRange));
+    }
 }

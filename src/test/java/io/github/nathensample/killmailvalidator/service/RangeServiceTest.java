@@ -11,6 +11,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.junit.Assert.assertEquals;
+
 @RunWith(MockitoJUnitRunner.class)
 public class RangeServiceTest
 {
@@ -23,7 +25,7 @@ public class RangeServiceTest
         String given = "8";
         MultiValueRange expected = new MultiValueRange(8);
         ComparableRange got = rangeService.getRange(given);
-
+        assertEquals(expected, got);
 
     }
 
@@ -33,7 +35,7 @@ public class RangeServiceTest
         String given = "8+";
         PositiveRange expected = new PositiveRange(8);
         ComparableRange got = rangeService.getRange(given);
-
+        assertEquals(expected, got);
     }
 
     @Test
@@ -42,7 +44,7 @@ public class RangeServiceTest
         String given = "8-";
         NegativeRange expected = new NegativeRange(8);
         ComparableRange got = rangeService.getRange(given);
-
+        assertEquals(expected, got);
     }
 
     @Test
@@ -51,7 +53,7 @@ public class RangeServiceTest
         String given = "8-10";
         MultiValueRange expected = new MultiValueRange(8, 10);
         ComparableRange got = rangeService.getRange(given);
-
+        assertEquals(expected, got);
     }
 
     @Test(expected = RangeParsingException.class)

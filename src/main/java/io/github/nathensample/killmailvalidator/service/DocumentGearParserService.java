@@ -27,6 +27,7 @@ public class DocumentGearParserService
     {
         Element gearDiv = document.select("div.row > div.col-xl-6:nth-child(2)").get(0);
         ItemSet.ItemSetBuilder builder = ItemSet.getBuilder();
+        //TODO: Include the IP of the user in the itemset
         for (ItemSlot slot : VALID_SLOTS) {
             Element itemElement = gearDiv.select(".item." + slot + " a>img").first();
             if (itemElement != null)
@@ -34,6 +35,8 @@ public class DocumentGearParserService
                 String itemName = itemElement.attr("title");
                 if (itemName != null)
                 {
+                    //Todo: Handle masterpiece https://gameinfo.albiononline.com/api/gameinfo/items/T6_ARMOR_CLOTH_SET2@1.png?count=1&quality=5 quality 5 = masterpiece
+                    //TODO: handle enchants https://gameinfo.albiononline.com/api/gameinfo/items/T6_ARMOR_CLOTH_SET2@1.png?count=1&quality=5 @1 = enchant
                     Item item = new Item(itemName);
                     builder.addPiece(slot, item);
                 }

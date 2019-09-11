@@ -44,12 +44,12 @@ public class RangeService
 
         if (rangeEndsWithSymbol(rangeString, '-'))
         {
-            return new NegativeRange(valueOf(rangeString.substring(0, rangeString.length()-1)));
+            return new NegativeRange(getIntFromStoredString(rangeString));
         }
 
         if (rangeEndsWithSymbol(rangeString, '+'))
         {
-            return new PositiveRange(valueOf(rangeString.substring(0, rangeString.length()-1)));
+            return new PositiveRange(getIntFromStoredString(rangeString));
         }
 
         if (RANGE_PATTERN.matcher(rangeString).matches())
@@ -70,5 +70,10 @@ public class RangeService
     private boolean rangeEndsWithSymbol(String rangeString, char symbol)
     {
         return rangeString.charAt(rangeString.length() - 1) == symbol;
+    }
+
+    private int getIntFromStoredString(String rangeString)
+    {
+        return valueOf(rangeString.substring(0, rangeString.length()-1));
     }
 }

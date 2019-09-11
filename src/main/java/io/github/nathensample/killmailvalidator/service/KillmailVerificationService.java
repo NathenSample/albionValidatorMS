@@ -34,6 +34,7 @@ public class KillmailVerificationService
         {
             Document webDoc = documentRetriever.getDocument(verificationRequest.getKillmailUrl());
             ItemSet lostSet = documentGearParserService.parseDocument(webDoc);
+            logger.info("Built Set:\n{}", lostSet);
         } catch (IOException e)
         {
             logger.error("Exception whilst requesting url {} e: {}", verificationRequest.getKillmailUrl(), e);

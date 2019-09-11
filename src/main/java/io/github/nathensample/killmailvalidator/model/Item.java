@@ -45,6 +45,15 @@ public class Item
         return standardizedName;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Item{" +
+                "standardizedName='" + standardizedName + '\'' +
+                ", tier=" + tier +
+                '}';
+    }
+
     public int getTier()
     {
         return tier;

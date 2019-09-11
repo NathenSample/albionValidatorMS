@@ -106,7 +106,7 @@ public class ItemSet
                     setBoots(item);
                     return;
                 case CAPE:
-                    setChest(item);
+                    setCape(item);
             }
         }
 
